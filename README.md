@@ -4,6 +4,8 @@
 
 原生 HTML / CSS / JavaScript 写的个人站点，Vite 负责多页面打包。博客和照片用 Markdown 维护，项目列表实时读取 GitHub 仓库，不需要手动登记。
 
+线上预览：**https://bugdesigner-hy.github.io/haizi/**（推送到 `main` 后由 GitHub Actions 自动构建发布）
+
 ## 页面
 
 | 路径 | 说明 |
@@ -101,7 +103,15 @@ export const hiddenRepos = new Set(["不想展示的仓库名"]);
 
 ## 部署
 
-`npm run build` 后把 `dist/` 整个目录丢给任意静态托管即可（Nginx、对象存储、Vercel/Netlify、GitHub Pages 都行）。`vite.config.js` 里 `base: "./"` 用的是相对路径，因此不需要额外改配置就能放在子路径下。
+### GitHub Pages（已配置）
+
+推送到 `main` 即自动发布：`.github/workflows/pages.yml` 里 `npm ci && npm run build`，把 `dist/` 上传为 Pages 产物，无需手动提交构建结果。也可以在 Actions 页面手动触发一次（`workflow_dispatch`）。
+
+线上地址：https://bugdesigner-hy.github.io/haizi/
+
+### 其他静态托管
+
+`npm run build` 后把 `dist/` 整个目录丢给任意静态托管即可（Nginx、对象存储、Vercel/Netlify 等）。`vite.config.js` 里 `base: "./"` 用的是相对路径，因此不需要额外改配置就能放在子路径下。
 
 ## 已知限制
 
