@@ -2,10 +2,12 @@
 export const projects = {
   yanbian: { name: "砚边", desc: "优雅古风诗笺。" },
   "json-boy": { name: "JSON Boy", desc: "动森版 JSON，试试看。" },
-  "mini-todo": { name: "Mini Todo", desc: "极简待办。" },
+  eyeBeat: { name: "eyeBeat", desc: "像素风网页音乐播放器。" },
+  "dsh-whale-balance": { name: "余额水杯", desc: "把 DeepSeek 余额显示成鲸鱼里上涨的水面。" },
+  fitcompass: { name: "FitCompass", desc: "肌肉、关节与动作的交互式解剖图谱。" },
   NN: { name: "NN", desc: "点一下，神经网络就从落点长出来。" },
   LiangTu: { name: "晾图", desc: "把图片挂起来。" },
   portBoy: { name: "portBoy", desc: "查进程、看路径、结束端口占用。" },
 };
 
-export const hiddenRepos = new Set(["hi-music", "vue-tetris"]);
+export const hiddenRepos = new Set(["hi-music", "vue-tetris", "BugDesigner-Hy", "mini-todo"]);
